@@ -2,19 +2,20 @@ function addAndSubstract(arr) {
 
     let sumOriginal = 0;
     let sumModified = 0;
+    let arrayLength = arr.length;
 
-    for (let i = 0; i < arr.length; i++) {
-        let index = i;
-        let current = arr[i];
-        sumOriginal += arr[i];
+    for (let index = 0; index < arrayLength; index++) {
+        let current = arr[index];
+        sumOriginal += current;
 
-        if (arr[i] % 2 === 0) {
-            arr[i] += index;
+        if (current % 2 === 0) {
+            current += index;
         } else {
-            arr[i] -= index;
+            current -= index;
         }
 
-        sumModified += arr[i];
+        arr[index] = current;
+        sumModified += current;
 
     }
 
