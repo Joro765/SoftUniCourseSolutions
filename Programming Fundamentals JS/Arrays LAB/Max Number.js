@@ -13,6 +13,7 @@ function maxNumber(arr) {
                 isBigger = false;
                 break;
             }
+
         }
 
         if (isBigger === true) {
