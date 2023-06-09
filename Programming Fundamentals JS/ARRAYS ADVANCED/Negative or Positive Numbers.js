@@ -12,9 +12,7 @@ function negativeOrPositiveNumbers(arr) {
         }
     }
 
-    for (let num of result) {
-        console.log(num);
-    }
+    console.log(result.join("\n"));
 
 }
 
