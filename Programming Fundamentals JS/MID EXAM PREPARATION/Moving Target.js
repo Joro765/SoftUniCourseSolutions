@@ -14,6 +14,7 @@ function movingTarget(data) {
             let power = Number(event[2]);
             if (i >= 0 && i < targets.length) {
                 targets[i] -= power;
+                if (targets[i] <= 0) {
                     targets.splice(i, 1);
                 }
             }
