@@ -1,7 +1,11 @@
 function printCity(obj) {
 
-    for (const key of Object.keys(obj)) {
-        console.log(`${key} -> ${obj[key]}`);
+    // for (const key of Object.keys(obj)) {
+    //     console.log(`${key} -> ${obj[key]}`);
+    // }
+
+    for (let [key, value] of Object.entries(obj)) {
+        console.log(`${key} -> ${value}`);
     }
 
 }
