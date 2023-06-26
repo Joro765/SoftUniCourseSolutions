@@ -4,18 +4,15 @@ function printTowns(data) {
     }
 
 
-    let cities = [];
-
 
     for (let i = 0; i < data.length; i++) {
         let cityInfo = data[i].split(" | ");
         obj.town = cityInfo[0];
         obj.latitude = Number(cityInfo[1]).toFixed(2);
         obj.longitude = Number(cityInfo[2]).toFixed(2);
-        cities.push(obj);
+        console.log(obj);
     }
 
-    console.log(cities);
 
 }
 
