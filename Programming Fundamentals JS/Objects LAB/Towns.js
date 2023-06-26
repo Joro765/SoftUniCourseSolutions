@@ -1,30 +1,22 @@
 function printTowns(data) {
-
-    class Town {
-        constructor(town, latitude, longitude) {
-            this.town = town;
-            this.latitude = latitude;
-            this.longitude = longitude;
-        }
-    }
-
-
     let cities = [];
 
 
-    for (let i = 0; i < data.length; i++) {
-        let cityInfo = data[i].split(" | ");
-        let name = cityInfo[0];
-        let lat = Number(cityInfo[1]).toFixed(2);
-        let log = Number(cityInfo[2]).toFixed(2);
-
-        let city = new Town(name, lat, log);
-        cities.push(city);
+    for (const townInfo of data) {
+        let [townName, latitude, longitude] = townInfo.split(" | ");
+        let currentTown = {
+            town: townName,
+            latitude: Number(latitude).toFixed(2),
+            longitude: Number(longitude).toFixed(2)
+        }
+        cities.push(currentTown)
     }
 
     for (const town of cities) {
         console.log(town);
+
     }
+
 }
 
 
