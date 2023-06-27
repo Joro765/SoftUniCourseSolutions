@@ -4,26 +4,18 @@ function dictionaryPrint(data) {
     let result = [];
 
     for (const line of data) {
-        let obj = JSON.parse(line);
-        let key = Object.keys(obj);
-        let value = String(Object.values(obj));
-        dict[key] = value;
-    }
-
-    for (const key in dict) {
-        result.push({ [key]: dict[key] })
-    }
-
-    result.sort((a, b) => a.key - b.key);
-
-    for (const obj of result) {
-        let key = Object.keys(obj);
-        let value = obj[key];
-        console.log(`Term: ${key} => Definition: ${obj[key]}`);
+        let obj = JSON.parse(line); // Parse String to Object
+        result.push(obj); // Add onject to an array
 
     }
 
 
+    for (const object of result) { // Loop objects from array
+        let key = Object.keys(object); // get key
+        let value = Object.values(object) // het value
+        console.log(`${key} -> ${value}`); // print
+
+    }
 }
 
 
