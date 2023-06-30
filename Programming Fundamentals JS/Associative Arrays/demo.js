@@ -58,3 +58,11 @@ for (const obj of list) {
     }
 
 }
+
+// Итериране на обекти в лист и във вътрешен цикъл итериране по ключ за всеки обект
+for (const obj of list) {
+    for (const key in obj) {
+        console.log(`${key} -> ${obj[key]}`);
+    }
+
+}
