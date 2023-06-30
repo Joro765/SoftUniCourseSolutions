@@ -16,10 +16,14 @@ function bookMeeting(data) {
         }
     }
 
-    // Итериране през обекта 
+    // Итериране през обекта с FOR IN
     for (const key in meeting) {
         console.log(`${key} -> ${meeting[key]}`);
+    }
 
+    // Итериране през обекта с FOR OFF
+    for (const [key, value] of Object.entries(meeting)) {
+        console.log(`${key} -> ${value}`);
     }
 
 }
