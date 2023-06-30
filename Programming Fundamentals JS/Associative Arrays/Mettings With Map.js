@@ -17,20 +17,16 @@ function bookMeeting(data) {
     }
 
 
-    // Итериране с мап FOR OF - Можем да итерираме Map Обект все едно е масив с FOR OF
+    // Итериране на МАП FOR OF - Можем да итерираме Map Обект все едно е масив с FOR OF
     for (const [key, value] of meeting) {
         console.log(`${key} -> ${value}`);
 
     }
 
-    // Итериране през обекта с FOR IN
-    for (const key in meeting) {
-        console.log(`${key} -> ${meeting[key]}`);
-    }
-
-    // Итериране през обекта с FOR OFF
-    for (const [key, value] of Object.entries(meeting)) {
+    // Итериране на МАП с entries. Не е нужно да викаме Object - класа за да достъпим ентрититата
+    for (const [key, value] of meeting.entries()) {
         console.log(`${key} -> ${value}`);
+
     }
 
 }
