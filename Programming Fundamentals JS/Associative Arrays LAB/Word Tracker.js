@@ -25,16 +25,15 @@ function wordTracker(data) {
         }
     }
 
-    // Sort
-    let sortedArray = new Map([...result.entries()].sort((a, b) => b[1] - a[1]));
+    // Sort - convert to array
+    let sortedArray = Array.from(result.entries()).sort((a, b) => b[1] - a[1])
 
-    // Print
-    for (const [key, value] of sortedArray.entries()) {
-        console.log(`${key} - ${value}`);
-
-    }
+    // Print every element with join
+    sortedArray.forEach(element => console.log(`${element.join(" - ")}`));
 
 }
+
+
 
 
 
