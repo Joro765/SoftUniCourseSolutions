@@ -17,4 +17,5 @@ let pattern = /[a-zA-Z]+[0-9]*[a-zA-Z0-9_]*@[a-z]+\.[a-z]+/gm;
 
 let match2 = text.match(pattern); // Вади всички записи в масив без допълнително инфо
 console.log(match2);
-console.log(pattern.test(text));
+
+console.log(pattern.test(text)); // Проверява дали имаме мач - връща true/false 
