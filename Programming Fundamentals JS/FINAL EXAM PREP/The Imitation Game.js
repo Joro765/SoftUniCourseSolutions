@@ -55,10 +55,6 @@ function imitationGame(data) {
 
                 break;
 
-
-
-
-            // o Changes all occurrences of the given substring with the replacement text.
         }
 
 
@@ -67,7 +63,7 @@ function imitationGame(data) {
     }
 
 
-    console.log(word);
+    console.log(`The decrypted message is: ${word}`);
 
 
 
