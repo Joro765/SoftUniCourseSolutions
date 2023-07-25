@@ -45,21 +45,3 @@ fancyBarcodes((["3",
     "@###Brea0D@###",
     "@##Che4s6E@##"]))
 
-
-
-//     for (const char of match.groups.barcode) {
-//         if (char % char === 0) {
-//             group += char;
-//             isValid = true;
-//         }
-//     }
-
-//     if (isValid === false) {
-//         console.log(`Product group: 00`);
-//     } else {
-//         console.log(`Product group: ${group}`);
-//     }
-
-// } else {
-//     console.log(`Invalid barcode`);
-// }
