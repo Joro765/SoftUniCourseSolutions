@@ -42,15 +42,13 @@ function worldTour(data) {
                 break;
 
 
-
             case "Switch":
                 let oldString = tokens[1];
                 let newString = tokens[2];
 
-                while (destinations.includes(oldString)) {
-                    destinations = destinations.replace(oldString, newString);
+                if (destinations.includes(oldString)) {
+                    destinations = destinations.replace(oldString, newString)
                 }
-
                 console.log(destinations);
 
                 break;
@@ -60,9 +58,7 @@ function worldTour(data) {
         command = data.shift();
     }
 
-
     console.log(`Ready for world tour! Planned stops: ${destinations}`);
-
 
 }
 
