@@ -19,8 +19,7 @@ function decryptingCommands(data) {
                 currentChar = tokens[1];
                 newChar = tokens[2];
 
-                if (text.includes(currentChar)) {
-
+                while (text.includes(currentChar)) {
                     text = text.replace(currentChar, newChar);
                 }
                 console.log(text);
@@ -78,9 +77,7 @@ function decryptingCommands(data) {
                 endIndex = Number(tokens[2]);
 
                 if ((startIndex >= 0 && startIndex < text.length) && (endIndex >= 0 && endIndex < text.length)) {
-                    let first = text.substring(0, startIndex);
-                    let last = text.substring(endIndex + startIndex);
-                    text = first + last;
+                    text = text.substring(0, startIndex) + text.substring(endIndex + 1);
                     console.log(text);
                 } else {
                     console.log(`Invalid indices!`);
