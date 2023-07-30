@@ -26,9 +26,7 @@ function messagesManager(data) {
                 sent = Number(tokens[2]);
                 received = Number(tokens[3]);
 
-                if (result.hasOwnProperty(user)) {
-                    break;
-                } else {
+                if (!result.hasOwnProperty(user)) {
                     result[user] = [sent, received];
                 }
                 break;
@@ -38,21 +36,24 @@ function messagesManager(data) {
                 let sender = tokens[1];
                 let receiver = tokens[2];
 
-                currentSent = Number(result[sender][0]);
-                currentReceived = Number(result[receiver][1]);
 
                 if (result.hasOwnProperty(sender) && result.hasOwnProperty(receiver)) {
-                    result[sender][0] = currentSent + 1;
-                    result[receiver][1] = currentReceived + 1;
 
-                    if ((result[sender][0] + result[sender][1]) === capacity) {
+                    currentSent = Number(result[sender][0]);
+                    currentReceived = Number(result[receiver][1]);
+
+                    if ((result[sender][0] + result[sender][1] + 1) >= capacity) {
                         delete result[sender];
                         console.log(`${sender} reached the capacity!`);
+                    } else {
+                        result[sender][0] = currentSent + 1;
                     }
 
-                    if ((result[receiver][1] + result[receiver][0]) === capacity) {
+                    if ((result[receiver][1] + result[receiver][0] + 1) >= capacity) {
                         delete result[receiver];
                         console.log(`${receiver} reached the capacity!`);
+                    } else {
+                        result[receiver][1] = currentReceived + 1;
                     }
                 }
                 break;
@@ -62,7 +63,7 @@ function messagesManager(data) {
                 let text = tokens[1];
 
                 if (text === "All") {
-                    Object.keys(result).forEach(key => delete result[key]);
+                    result = {};
                 } else {
                     if (result.hasOwnProperty(text)) {
                         delete result[text];
@@ -80,20 +81,14 @@ function messagesManager(data) {
 
     let usersCount = Object.keys(result).length;
 
-    if (usersCount > 0) {
-        console.log(`Users count: ${usersCount}`);
-    } else {
-        console.log(`Users count: 0`);
-    }
 
-
+    console.log(`Users count: ${usersCount}`);
     for (const element of Object.entries(result)) {
         let person = element[0];
         let totalMessages = Number(element[1][0]) + Number(element[1][1]);
 
         console.log(`${person} - ${totalMessages}`);
     }
-
 
 }
 

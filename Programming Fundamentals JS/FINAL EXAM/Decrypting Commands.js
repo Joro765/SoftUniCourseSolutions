@@ -19,7 +19,8 @@ function decryptingCommands(data) {
                 currentChar = tokens[1];
                 newChar = tokens[2];
 
-                while (text.includes(currentChar)) {
+                if (text.includes(currentChar)) {
+
                     text = text.replace(currentChar, newChar);
                 }
                 console.log(text);
