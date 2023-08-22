@@ -1,9 +1,8 @@
-let a = 2.5;
+function solve(num) {
 
-let result = a.toFixed(4);
+    console.log(num);
 
-console.log(typeof result);
 
-let result2 = Number(result);
+}
 
-console.log(result2 + 4);
+solve(2222222)
