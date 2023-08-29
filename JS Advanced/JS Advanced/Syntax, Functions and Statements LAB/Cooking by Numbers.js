@@ -1,9 +1,7 @@
 function solve(num, operation1, operation2, operation3, operation4, operation5) {
 
     let arr = [num, operation1, operation2, operation3, operation4, operation5];
-
     let number = Number(arr.shift())
-
     let task = arr.shift();
 
     while (task) {
@@ -31,12 +29,6 @@ function solve(num, operation1, operation2, operation3, operation4, operation5) 
         }
         task = arr.shift();
     }
-
-
-
-
-
-
 
 }
 
