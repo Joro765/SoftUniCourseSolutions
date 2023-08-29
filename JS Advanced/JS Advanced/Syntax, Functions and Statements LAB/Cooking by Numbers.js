@@ -1,8 +1,9 @@
-function solve(num, operation1, operation2, operation3, operation4, operation5) {
+function solve(...params) { // Тук реално се подават 6 параметъра, но за да не ги пиша един по един и после да ги добавям в масив, ползвам ...params
 
-    let arr = [num, operation1, operation2, operation3, operation4, operation5];
-    let number = Number(arr.shift())
-    let task = arr.shift();
+    // ...params - прави масив от всички параметри без значение колко са. Ползва се ако не знаем колко параметри ще бъдат подадени
+
+    let number = Number(params.shift())
+    let task = params.shift();
 
     while (task) {
         switch (task) {
@@ -27,7 +28,7 @@ function solve(num, operation1, operation2, operation3, operation4, operation5) 
                 console.log(number);
                 break;
         }
-        task = arr.shift();
+        task = params.shift();
     }
 
 }
