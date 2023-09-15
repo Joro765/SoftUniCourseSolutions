@@ -1,12 +1,16 @@
-function solve(fruit, grams, pricePerKG) {
+function solve(year, month, day) {
 
-    let weigthInKG = grams / 1000;
+    let yesterday = new Date(year, month - 1, day);
 
-    let price = weigthInKG * pricePerKG;
+    yesterday.setDate(yesterday.getDate() - 1);
 
-    console.log(`I need ${price.toFixed(2)} to buy ${weigthInKG.toFixed(2)} kilograms ${fruit}.`);
+    let newDay = yesterday.getDate();
+    let newMonth = yesterday.getMonth() + 1;
+    let newYear = yesterday.getFullYear();
+
+    console.log(`${newYear}-${newMonth}-${newDay}`);
 
 }
 
 
-solve('orange', 2500, 1.80)
+solve(2016, 9, 30)
