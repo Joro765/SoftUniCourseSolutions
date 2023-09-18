@@ -1,9 +1,6 @@
-let arr = [1, 2, 3, 4, 5];
+let nums = [17, 100, 3, 9, 28, 30, 2, 10, 0];
 
-let buff = "";
+nums.sort((a, b) => b - a);
 
-while (arr.length > 0) {
-    buff += `${arr.pop()} `
-}
 
-console.log(buff.trim());
+console.log(nums);
