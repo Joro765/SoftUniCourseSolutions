@@ -6,8 +6,8 @@ function solve(arr) {
     let resultArray = [];
 
     while (sortedArray.length > 0) {
-        let biggest = sortedArray.pop();
         let smallest = sortedArray.shift();
+        let biggest = sortedArray.pop();
 
         resultArray.push(smallest);
         resultArray.push(biggest);
