@@ -1,14 +1,23 @@
-let cat = {
-    name: "Maya",
-    age: 7,
+const person = {
+    firstName: "Joro",
+    lastName: "Georgiev",
 
-    sayHello: function () {
-        console.log(`${this.name} -> Meow!`);
+    fullName: function () {
+        console.log(`${this.firstName} - ${this.lastName}`);
     }
 }
 
-let func = cat.sayHello;
 
-func();
+// Взимаме функцията от обекта в отделна променлива
+let getFullName = person.fullName;
 
-cat.sayHello();
+const anotherPerson = {
+    firstName: "Boris",
+    lastName: "Dali"
+}
+
+// Подаваме я на друг обект за да я използва
+anotherPerson.fullName = getFullName;
+
+anotherPerson.fullName()
+
