@@ -16,7 +16,7 @@ function createCar(car) {
         wheelSize = wheelSize - 1;
     }
 
-    resultCar.wheels = [wheelSize, wheelSize, wheelSize, wheelSize];
+    resultCar.wheels = new Array(4).fill(wheelSize);
 
 
     // Engine
