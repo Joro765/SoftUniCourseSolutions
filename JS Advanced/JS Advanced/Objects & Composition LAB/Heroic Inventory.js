@@ -9,9 +9,8 @@ function heroRegister(heroes) {
             level: Number(level)
         }
 
-        itemsArray = items.split(", ");
-
-        if (items.length > 0) {
+        if (items) {
+            itemsArray = items.split(", ");
             heroObj.items = itemsArray;
         } else {
             heroObj.items = [];
@@ -26,7 +25,7 @@ function heroRegister(heroes) {
 
 
 
-heroRegister(['Isacc / 25 / Apple, GravityGun',
+heroRegister(['Isacc / 25',
 
     'Derek / 12 / BarrelVest, DestructionSword',
 
