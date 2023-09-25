@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solve</title>
+</head>
+
+<body>
+    <h1>Hello Javascript!</h1>
+    <h1>Hello HTML!</h1>
+    <h1>Hello CSS!</h1>
+    <script>
+        let header = document.getElementsByTagName("h1");
+
+        let arr = [];
+
+        for (let element of header) {
+            arr.push(element.textContent); // с element.innerHTML или element.textContent мога в реално време да променям текста;
+        }
+
+        console.log(arr.join(", "));
+
+    </script>
+</body>
+
+</html>
