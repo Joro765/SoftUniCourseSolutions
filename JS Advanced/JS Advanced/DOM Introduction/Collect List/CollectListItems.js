@@ -1,7 +1,7 @@
 function extractText() {
-    let listItems = document.querySelectorAll("#items li");
+    let listItems = document.getElementsByTagName("li");
 
-    let textArea = document.querySelector("#result")
+    let textArea = document.getElementById("result")
 
 
     for (const item of listItems) {
