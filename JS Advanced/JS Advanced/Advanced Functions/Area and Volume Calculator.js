@@ -12,24 +12,7 @@ function vol(x, y, z) {
 
 
 
-function solve(area, vol, input) {
-    let arrayObjects = JSON.parse(input);
-    let output = [];
 
-    arrayObjects.forEach(obj => {
-        let areaResult = area.apply(obj);
-        let volResult = vol.apply(obj);
-
-        let resObj = {
-            area: areaResult,
-            volume: volResult
-        }
-
-        output.push(resObj);
-
-    });
-    return output
-}
 
 
 
