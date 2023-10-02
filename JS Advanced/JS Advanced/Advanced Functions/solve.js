@@ -30,3 +30,18 @@ growFunc.call(anotherCat, 5)
 
 greet = cat.sayHello.bind(cat)
 greet() // Това извикване на новата функция директно се обръща към обекта от който е взета
+
+
+// Example for nested functions
+function sayHello() {
+    return "HELLO";
+}
+
+function greeting(func, text) {
+    return func() + " " + text
+}
+
+let result = greeting(sayHello, "JavaScript")
+
+
+console.log(result);
