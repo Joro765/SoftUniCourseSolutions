@@ -10,19 +10,21 @@ function solve(face, suit) {
     let possibleFaces = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
 
 
-    if (possibleFaces.includes(face)) {
-        return {
-            face: face,
-            suit: suit,
-            toString: function () {
-                return this.face + this.suit
-            }
-        }
-    } else {
-        throw new Error("Error");
+    // Хвърляме грешка ако картата е навалидна. Ако е валидна ще мине проверката и ще продължи  програмата
+    if (!possibleFaces.includes(face)) {
+        throw new Error(`${face} is not a valid face for a card!`)
     }
 
+
+    // Ако проверката е минала и имам валидна карта ще върнем обекта
+    return {
+        face: face,
+        suit: suit,
+        toString: function () {
+            return this.face + this.suit
+        }
+    }
 }
 
 
-console.log(solve('2', 'A').toString())
+console.log(solve('10', 'A').toString())
