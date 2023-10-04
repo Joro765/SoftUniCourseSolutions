@@ -7,15 +7,22 @@ function solve(face, suit) {
         case "C": suit = "\u2663"; break;
     }
 
-    return {
-        [face]: suit,
-        toString: function () {
+    let possibleFaces = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
+
+
+    if (possibleFaces.includes(face)) {
+        return {
+            face: face,
+            suit: suit,
+            toString: function () {
+                return this.face + this.suit
+            }
         }
+    } else {
+        throw new Error("Error");
     }
-
-
 
 }
 
 
-console.log(solve('10', 'H'))
+console.log(solve('2', 'A').toString())
