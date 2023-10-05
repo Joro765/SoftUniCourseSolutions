@@ -1,12 +1,17 @@
-function sum(arr) {
-    let result = 0;
-
-    for (const element of arr) {
-        result += element;
-    }
-    return result;
+function sum(a, b) {
+    return a + b;
 }
 
-module.exports = { sum }
+function multiply(a, b) {
+    return a * b;
+}
 
-// Подавам функцията за ползване в друг файл
+function divide(a, b) {
+    return a / b;
+}
+
+module.exports = {
+    sum,
+    multiply,
+    divide
+}
