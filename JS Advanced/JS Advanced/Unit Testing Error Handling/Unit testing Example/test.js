@@ -15,5 +15,5 @@ describe("sum", function () {
         expect(result).to.be.equal(7)
     })
 })
-\
+
 
