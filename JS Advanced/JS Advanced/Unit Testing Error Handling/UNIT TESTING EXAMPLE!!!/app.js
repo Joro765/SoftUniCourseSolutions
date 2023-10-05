@@ -1,4 +1,7 @@
 function sum(a, b) {
+    if ((typeof a === "string") || (typeof b === "string")) {
+        return undefined
+    }
     return a + b;
 }
 
