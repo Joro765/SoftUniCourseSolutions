@@ -12,8 +12,8 @@ class Point {
 }
 
 // Създаваме си 2 инстанции на класа
-let point1 = new Point(0, 0);
-let point2 = new Point(3, 4);
+let point1 = new Point(5, 5);
+let point2 = new Point(9, 8);
 
 // Викаме метода на класа с 2те инстанции, може да се вика и с нормален обект, който не е от клас POINT!!!
 console.log(Point.distance(point1, point2));
