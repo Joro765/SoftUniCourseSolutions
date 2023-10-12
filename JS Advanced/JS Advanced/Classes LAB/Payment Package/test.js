@@ -75,6 +75,12 @@ describe("incorrect parameters", function () {
     it("incorrect VAT", function () {
         expect(() => new PaymentPackage("Joro", 20).VAT = -4).to.throw("VAT must be a non-negative number");
     })
+    it("incorrect VAT", function () {
+        expect(() => new PaymentPackage("Joro", 20).VAT = "HEY").to.throw("VAT must be a non-negative number");
+    })
+    it("incorrect VAT", function () {
+        expect(() => new PaymentPackage("Joro", 20).VAT = []).to.throw("VAT must be a non-negative number");
+    })
     it("incorrect active status", function () {
         expect(() => new PaymentPackage("Joro", 20).active = 23).to.throw("Active status must be a boolean");
     })
