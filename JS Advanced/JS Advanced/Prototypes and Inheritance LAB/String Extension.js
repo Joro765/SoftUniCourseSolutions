@@ -24,15 +24,7 @@
     }
 
     String.prototype.truncate = function (n) {
-        if (this.length < n) {
-            return this
-        } else {
-            if (this.includes(" ")) {
 
-            } else {
-                return this.substring(this.length - (n - 3)) + "..."
-            }
-        }
     }
 
     String.format = function format() {
@@ -44,4 +36,3 @@
 
 let str = "hello";
 
-console.log(str.truncate(4));
