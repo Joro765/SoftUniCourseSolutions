@@ -32,7 +32,7 @@ const chooseYourCar = {
 
     carFuelConsumption(distanceInKilometers, consumptedFuelInLiters) {
 
-        let litersPerHundredKm =((consumptedFuelInLiters / distanceInKilometers)* 100).toFixed(2);
+        let litersPerHundredKm = ((consumptedFuelInLiters / distanceInKilometers) * 100).toFixed(2);
 
         if (typeof distanceInKilometers !== "number" || distanceInKilometers <= 0 ||
             typeof consumptedFuelInLiters !== "number" || consumptedFuelInLiters <= 0) {
@@ -44,3 +44,13 @@ const chooseYourCar = {
         }
     }
 }
+
+module.exports = {
+    chooseYourCar
+}
+
+
+
+let car = chooseYourCar;
+
+console.log(car.carFuelConsumption(1000, 70));
