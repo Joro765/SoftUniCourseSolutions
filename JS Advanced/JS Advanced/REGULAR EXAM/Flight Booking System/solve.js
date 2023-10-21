@@ -37,9 +37,10 @@ class FlightBookingSystem {
         if (currentPassenger) {
             let indexOfPassenger = this.bookings.indexOf(currentPassenger);
             this.bookings.splice(indexOfPassenger, 1);
+            this.bookinsCount--;
             return `Booking for passenger ${passengerName} on flight ${flightNumber} is cancelled.`
         } else {
-            return `Booking for passenger ${passengerName} on flight ${flightNumber} not found.`
+            throw new Error(`Booking for passenger ${passengerName} on flight ${flightNumber} not found.`)
         }
     }
 
@@ -61,13 +62,18 @@ class FlightBookingSystem {
 
 
         if (criteria === "cheap") {
+            let arr = [];
             let cheapFlights = this.flights.find(fl => fl.price <= 100);
             if (cheapFlights) {
-                let flightNumber = cheapFlights.flightNumber;
+                for (const flight of this.flights) {
+                    if (flight.price <= 100) {
+                        arr.push(flight.flightNumber);
+                    }
+                }
                 buff += `Cheap bookings:\n`
                 for (const person of this.bookings) {
-                    if (person.flightNumber === flightNumber) {
-                        buff += `${person.passengerName} booked for flight ${person.flightNumber}.`
+                    if (arr.includes(person.flightNumber)) {
+                        buff += `${person.passengerName} booked for flight ${person.flightNumber}.\n`
                     }
                 }
             } else {
@@ -77,13 +83,18 @@ class FlightBookingSystem {
 
 
         if (criteria === "expensive") {
+            let arr = [];
             let cheapFlights = this.flights.find(fl => fl.price > 100);
             if (cheapFlights) {
-                let flightNumber = cheapFlights.flightNumber;
+                for (const flight of this.flights) {
+                    if (flight.price > 100) {
+                        arr.push(flight.flightNumber);
+                    }
+                }
                 buff += `Expensive bookings:\n`
                 for (const person of this.bookings) {
-                    if (person.flightNumber === flightNumber) {
-                        buff += `${person.passengerName} booked for flight ${person.flightNumber}.`
+                    if (arr.includes(person.flightNumber)) {
+                        buff += `${person.passengerName} booked for flight ${person.flightNumber}.\n`
                     }
                 }
             } else {
@@ -100,12 +111,9 @@ class FlightBookingSystem {
 
 }
 
-
 const system = new FlightBookingSystem("TravelWorld");
-console.log(system.addFlight("AA101", "Los Angeles", "09:00 AM", 90));
-console.log(system.addFlight("BB202", "New York", "10:30 AM", 100));
+console.log(system.addFlight("AA101", "Los Angeles", "09:00 AM", 250));
+console.log(system.addFlight("BB202", "New York", "10:30 AM", 180));
 console.log(system.bookFlight("Alice", "AA101"));
 console.log(system.bookFlight("Bob", "BB202"));
-console.log(system.showBookings("cheap"));
-
-
+console.log(system.showBookings("expensive"));
