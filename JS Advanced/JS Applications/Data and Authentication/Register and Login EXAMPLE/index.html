@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register DEMO</title>
+</head>
+
+<body>
+    <!-- REGISTER FORM-->
+    <h1>Register Form</h1>
+    <form action="POST" id="register-form">
+        <div>
+            <label for="email">EMAIL</label>
+            <input type="text" name="email" />
+        </div>
+        <div>
+            <label for="email">PASSWORD</label>
+            <input type="password" name="password" />
+        </div>
+        <div>
+            <label for="email">PASSWORD</label>
+            <input type="password" name="repass" />
+        </div>
+        <div>
+            <input type="submit" value="Register" />
+        </div>
+    </form>
+    <!-- Login FORM-->
+    <h1>Login Form</h1>
+    <form action="POST" id="login-form">
+        <div>
+            <label for="email">EMAIL</label>
+            <input type="text" name="email" />
+        </div>
+        <div>
+            <label for="email">PASSWORD</label>
+            <input type="password" name="password" />
+        </div>
+        <div>
+            <input type="submit" value="Login" />
+        </div>
+    </form>
+
+
+    <script>
+        const baseUrl = 'http://localhost:3030'
+        const registerForm = document.getElementById("register-form");
+        const loginForm = document.getElementById("login-form");
+
+        registerForm.addEventListener("submit", registerUser);
+        loginForm.addEventListener("submit", loginUser);
+
+
+        // REGISTER FUNC
+        async function registerUser(e) {
+            e.preventDefault();
+
+            let formData = new FormData(e.currentTarget);
+
+            let email = formData.get("email");
+            let password = formData.get("password");
+
+            let data = {
+                email: email,
+                password: password
+            }
+
+            // Фечваме пост заявка като запазваме респонс
+            const response = await fetch(`${baseUrl}/users/register`, {
+                method: 'POST',
+                headers: { 'Content-type': 'application/json' },
+                body: JSON.stringify(data)
+            })
+            const result = await response.json();
+
+        }
+
+
+        // LOGIN FUNC
+        async function loginUser(e) {
+            e.preventDefault();
+
+            let formData = new FormData(e.currentTarget);
+
+            let email = formData.get("email");
+            let password = formData.get("password");
+
+            let data = {
+                email: email,
+                password: password
+            }
+
+            const response = await fetch(`${baseUrl}/users/login`, {
+                method: "POST",
+                headers: { 'Content-type': 'application/json' },
+                body: JSON.stringify(data)
+            })
+            const result = await response.json();
+            // Взимаме токена
+            localStorage.setItem("token", result.accessToken);
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
