@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Demo</title>
+</head>
+
+<body>
+    <form method="POST" id="login-form"> <!-- FORM -->
+        <div>
+            <label for="username">USERNAME</label>
+            <input type="text" id="username" name="username" placeholder="username...">
+        </div>
+        <div>
+            <label for="password">PASSWORD</label>
+            <input type="password" id="password" name="password" placeholder="password...">
+        </div>
+        <div>
+            <input type="submit" id="submit-button" value="Login">
+        </div>
+    </form>
+
+
+    <script>
+        const formElement = document.getElementById("login-form"); // Взимаме си референция към цялата форма
+        formElement.addEventListener("submit", submitData); // На събмит
+
+        async function submitData(e) {
+            e.preventDefault();   // Спираме рефреша на страницата
+
+            let formData = new FormData(e.currentTarget); // Създаваме инстанция на клас ФормДата от която си взимаме после полетата.
+            let username = formData.get("username");
+            let password = formData.get("password");
+
+            console.log(username);
+            console.log(password);
+        }
+
+
+
+    </script>
+</body>
+
+</html>
