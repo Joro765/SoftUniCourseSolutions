@@ -1,0 +1,20 @@
+.movie-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.movie-card {
+    margin: 20px;
+    width: 260px;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 15px;
+}
+
+.login-page {
+    width: 960px;
+    margin: auto;
+}
