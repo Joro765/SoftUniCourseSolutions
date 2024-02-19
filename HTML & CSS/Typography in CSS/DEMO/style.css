@@ -1,0 +1,14 @@
+@import url(typography.css);
+
+
+
+.site {
+    max-width: 66ch;
+    margin: 0 auto;
+}
+
+
+.site-footer {
+    text-align: center;
+    margin-top: 2.5em;
+}

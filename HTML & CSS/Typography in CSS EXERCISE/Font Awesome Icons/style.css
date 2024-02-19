@@ -1,0 +1,52 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+
+
+body {
+    font-family: proxima-nova, "Helvetica Neue", Helvetica, Aria, sans-serif;
+}
+
+
+nav {
+    border: 1px solid #e3e3e3;
+    width: 200px;
+    font-size: 14px;
+    background-color: #f5f5f5;
+    line-height: 20px;
+}
+
+li {
+    list-style: none;
+    line-height: 25px;
+    margin-left: 10px;
+}
+
+
+a {
+    text-decoration: none;
+    color: #c83025;
+}
+
+button {
+    padding: 4px 12px;
+    line-height: 20px;
+    color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button.shopping {
+    background-color: #83a94c;
+}
+
+button.info {
+    background-color: #008ed0;
+}
+
+button.delete {
+    background-color: #cc4036;
+}
+
+i {
+    margin-right: 5px;
+}

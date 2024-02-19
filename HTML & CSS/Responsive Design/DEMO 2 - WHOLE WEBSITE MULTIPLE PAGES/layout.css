@@ -1,0 +1,32 @@
+body {
+    padding: 2em;
+}
+
+
+@media (min-width:800px) {
+    .site {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 2em;
+    }
+}
+
+
+@media (min-width:1000px) {
+    .site {
+        margin: 0 auto;
+        max-width: 50em;
+    }
+}
+
+
+
+main {
+    flex: 1 0 60%;
+}
+
+
+aside {
+    flex: 1 0 30%;
+}

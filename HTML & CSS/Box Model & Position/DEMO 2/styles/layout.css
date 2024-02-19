@@ -1,0 +1,14 @@
+body {
+    padding: 0.2em 1em;
+}
+
+.site {
+    max-width: 50em;
+    margin: 0 auto;
+}
+
+.site-header,
+.site-content,
+.site-footer {
+    padding: 1em;
+}

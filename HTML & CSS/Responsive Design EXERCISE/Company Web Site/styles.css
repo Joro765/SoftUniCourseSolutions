@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial;
+}
+
+
+header {
+  background-color: #1abc9c;
+  text-align: center;
+  color: white;
+  padding: 60px;
+  margin: 0;
+}
+
+nav {
+  background-color: #333;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+}
+
+nav a:hover {
+  color: white;
+  background-color: #1abc9c;
+}
+
+aside {
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+main {
+  background-color: white;
+  padding: 20px;
+}
+
+footer {
+  background-color: #ddd;
+  padding: 20px;
+  text-align: center;
+}
+
+
+
+/* TODO Responsive layout - If the screen is smaller than 700px, 
+display the navigation bar links as block and center the text */
+
+@media (min-width:700px) {
+  nav {
+    text-align: start;
+  }
+
+  nav a {
+    display: inline-block;
+  }
+}
+
+
+/* TODO Responsive layout - when the screen is less than 700px wide, 
+make the two columns stack on top of each other instead of next to each other */
+
+@media (min-width:700px) {
+
+  body {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0 2em;
+  }
+
+  header,
+  nav,
+  footer {
+    width: 100%;
+  }
+
+  aside {
+    flex: 0 0 30%;
+  }
+
+  main {
+    flex: 1 0 50%;
+  }
+
+}

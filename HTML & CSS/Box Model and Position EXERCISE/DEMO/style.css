@@ -1,0 +1,26 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+
+
+body {
+    background-color: #02475e;
+    width: 210px;
+    padding: 5px;
+}
+
+section {
+    border-top: 1px solid #fefecc;
+    margin-top: 20px;
+}
+
+a {
+    color: rgba(16, 15, 15, 0.68);
+    text-decoration: none;
+    border: 1px solid #fefecc;
+    border-radius: 10px;
+    background: #fefecc;
+    padding: 2px 5px;
+    position: relative;
+    margin: 5px;
+    top: -10px;
+    display: inline;
+}

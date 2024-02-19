@@ -1,0 +1,31 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+aside {
+    border: 1px solid blue;
+    padding: 1em;
+}
+
+main {
+    border: 1px solid red;
+    padding: 1em;
+}
+
+
+.site {
+    max-width: 40em;
+    margin: 2em auto;
+    padding: 2em;
+    border: 1px solid black;
+    display: flex;
+}
+
+
+
+aside ul {
+    list-style: none;
+
+}

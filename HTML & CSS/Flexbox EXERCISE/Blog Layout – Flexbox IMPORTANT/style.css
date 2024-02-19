@@ -1,0 +1,112 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* LAYOUT */
+body {
+    padding: 2em;
+    background-color: #eee;
+}
+
+.page {
+    max-width: 60vw;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+
+.site-header {
+    flex: 0 0 100%;
+    border-bottom: 2px solid black;
+}
+
+
+.site-main {
+    flex: 1 0 70%;
+}
+
+.site-aside {
+    flex: 0 1 auto;
+}
+
+
+
+/* IMAGES */
+
+img {
+    border: 3px solid #333;
+    padding: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 0.5em 0 rgba(0, 0, 0, 0.3);
+}
+
+.align-left {
+    float: left;
+    margin: 0 1em 1em 0;
+}
+
+
+.align-right {
+    float: right;
+    margin: 0 0 1em 1em;
+}
+
+
+
+/* TYPOGRAPHY */
+
+p,
+ul {
+    padding-bottom: 1.5em;
+}
+
+.site-aside ul {
+    list-style: none;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 1em;
+    margin-bottom: 0.5em;
+}
+
+
+h1 {
+    font-size: 2.2em;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+.site-title {
+    font-size: 2em;
+    text-transform: uppercase;
+    padding-bottom: 1em;
+}
+
+
+blockquote {
+    text-align: center;
+    font-style: italic;
+    opacity: 0.7;
+    width: 70%;
+    margin: 0 auto;
+}
+
+blockquote p:nth-child(2) {
+    font-weight: bold;
+}

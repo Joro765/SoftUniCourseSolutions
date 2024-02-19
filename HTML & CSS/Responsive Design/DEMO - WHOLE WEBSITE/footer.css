@@ -1,0 +1,11 @@
+.site-footer {
+    display: flex;
+    flex: 0 0 100%;
+    border-top: 2px solid black;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.site-footer p {
+    margin-top: 1em;
+}

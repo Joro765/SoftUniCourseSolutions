@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant&display=swap");
+
+/* GENERIC */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    font: 18px/1.5 "Karla", sans-serif;
+}
+
+
+.width-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.site-section {
+    padding: 2em;
+}
+
+body {
+    background-image: url("images/poster.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top center;
+}
+
+
+/* HEADER AND NAV */
+
+
+.site-section.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header ul {
+    list-style: none;
+    display: flex;
+}
+
+
+.title a {
+    width: 130px;
+    height: 120px;
+    display: block;
+    background-image: url("images/logo.webp");
+    overflow: hidden;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-indent: -999px;
+}
+
+
+.header nav li {
+    padding: 0 1em;
+}
+
+
+.header nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/* BANNER SECTION */
+
+.site-section.banner {
+    color: #fff;
+    text-align: center;
+    padding-bottom: 8em;
+}
+
+.site-section.banner h1 {
+    font-size: 90px;
+    margin-top: 120px;
+    margin-bottom: 150px;
+    font-family: "Cormorant Infant", sans-serif;
+}
+
+
+/* QUOTE SECTION */
+
+.site-section.quote {
+    background-color: #f8f0e9;
+}
+
+.site-section.quote p:nth-child(1) {
+    font-size: 18px;
+    margin-bottom: 60px;
+}
+
+.site-section.site-section.quote .flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+.site-section.quote .flex-container p {
+    font-size: 60px;
+    line-height: 1;
+    font-family: "Cormorant Infant", sans-serif;
+    max-width: 90%;
+    margin-bottom: 70px;
+}
+
+
+
+/* SUPPORT SECTION */
+
+.site-section.support {
+    background-color: #e14647;
+    color: #fff;
+    text-align: center;
+}
+
+
+.site-section.support h4 {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 30px;
+    font-family: "Karla", sans-serif;
+}
+
+
+.site-section.support p {
+    font-weight: normal;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+
+
+/* MEDIA SECTION */
+
+.site-section.media {
+    background-color: #f8f0e9;
+    text-align: center;
+}
+
+
+.site-section.media .media-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+
+.site-section.media .media-container .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 40%;
+    gap: 2em;
+    text-align: start;
+    margin-bottom: 40px;
+}
+
+.site-section.media .media-container h2 {
+    font-size: 40px;
+    line-height: 1;
+    font-weight: bold;
+    font-family: "Cormorant Infant", sans-serif;
+    margin-bottom: 40px;
+}
+
+
+.site-section.media .media-container .content p {
+    font-size: 14px;
+}
+
+
+.site-section.media .image img {
+    display: block;
+    width: 400px;
+    height: 300px;
+    aspect-ratio: 1/1;
+}
+
+
+.site-section.media .button {
+    text-decoration: none;
+    background-color: #fff;
+    padding: 0.2em 0.5em;
+    border: 1px solid #000;
+    border-radius: 0.3em;
+    color: #000;
+    font-size: 12px;
+}
+
+
+/* SECTIOn QUIDE */
+
+.site-section.guide {
+    background-color: #e14647;
+    color: #fff;
+}
+
+
+.site-section.guide .flex-guide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.site-section.guide .flex-guide h2 {
+    font-family: "Cormorant Infant", sans-serif;
+    font-size: 50px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+
+}
+
+.site-section.guide .flex-guide p {
+    max-width: 50%;
+    font-family: "Karla", sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+
+.site-section.guide .flex-guide .button {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    background-color: #fad87a;
+    border-radius: 2em;
+    padding: 1em;
+    margin-bottom: 30px;
+
+}
+
+
+/* FOOTER */
+
+.site-section.footer {
+    background-color: #352b2a;
+}
+
+
+.site-section.footer .logo {
+    width: 80px;
+    height: 70px;
+    display: block;
+    background-image: url("images/logo.webp");
+    overflow: hidden;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-indent: -999px;
+}
+
+
+.site-section.footer p {
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 1em;
+}
+
+.site-section.footer .copyright {
+    color: #ccc;
+}

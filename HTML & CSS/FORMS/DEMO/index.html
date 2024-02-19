@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>DEMO FORMS</title>
+</head>
+
+<body>
+    <h1>Working with Forms</h1>
+
+    <h2>Search in Google</h2>
+    <form action="https://www.google.bg/search" method="get">
+        <label for="search-field">Search for:</label>
+        <br>
+        <input type="text" name="q" id="search-field">
+        <input type="submit" value="Search">
+    </form>
+
+    <fieldset>
+        <legend>Car Configurator</legend>
+        <h3>Model</h3>
+        <form action="#">
+            <p>Select a car:</p>
+            <input type="radio" name="car" value="Audi" id="car-Audi">
+            <label for="car-Audi">Audi</label>
+            <input type="radio" name="car" value="BMW" id="car-BMW">
+            <label for="car-BMW">BMW</label>
+            <input type="radio" name="car" value="VW" id="car-VW">
+            <label for="car-VW">VW</label>
+
+
+            <h3>Wheels</h3>
+            <p>Select wheels:</p>
+            <input type="checkbox" name="wheels" value="19 inch" id="wheels-19 inch">
+            <label for="wheels-19 inch">19 inch</label>
+            <input type="checkbox" name="wheels" value="20 inch" id="wheels-20 inch">
+            <label for="wheels-20 inch">20 inch</label>
+            <input type="checkbox" name="wheels" value="21 inch" id="wheels-21 inch">
+            <label for="wheels-21 inch">21 inch</label>
+
+
+            <h3>Engine</h3>
+            <p> <label for="">Choose engine:</label></p>
+            <select name="engine" id="engineSelect">
+                <option value="2.0 tfsi" selected>2.0 TFSI</option>
+                <option value="3.0 t">3.0 T</option>
+                <option value="3.0 tdi">3.0 TDI</option>
+                <option value="4.2 fsi">4.2 FSI</option>
+            </select>
+            <input type="submit" value="Submit">
+        </form>
+    </fieldset>
+</body>
+
+</html>
