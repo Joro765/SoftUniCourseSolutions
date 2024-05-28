@@ -1,6 +1,0 @@
-math
-history
-computer science
-sports
-networking
-engineering
