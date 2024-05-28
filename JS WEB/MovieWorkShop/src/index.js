@@ -13,7 +13,8 @@ app.engine("hbs", handlebars.engine({
 app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "views"));
 
-
+// Static css and images
+app.use(express.static("src/public"));
 
 
 
