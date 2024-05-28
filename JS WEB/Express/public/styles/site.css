@@ -1,0 +1,19 @@
+* {
+    font-style: italic;
+}
+
+h1 {
+    color: rgb(41, 41, 230);
+}
+
+
+li {
+    list-style: none;
+}
+
+
+div {
+    border: 1px solid #ccc;
+    width: fit-content;
+    height: fit-content;
+}
