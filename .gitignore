@@ -397,3 +397,4 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 ANGULAR/Project/RecipeBook/
+JS WEB/.DS_Store
