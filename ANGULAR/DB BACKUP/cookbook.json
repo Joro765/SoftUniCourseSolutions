@@ -1,0 +1,90 @@
+{
+    "recipes": [
+        {
+            "_id": "01",
+            "name": "Chicken Soup",
+            "img": "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2023/10/Chicken-Soup-main-2.jpg",
+            "category": "soup"
+        },
+        {
+            "_id": "02",
+            "name": "Pasta Carbonara",
+            "img": "https://www.foodandwine.com/thmb/DTkNucHOU-YwpbJCtGQsflDQEs0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Best-Spaghetti-Carbonara-Youll-Ever-Eat-Takes-Just-30-Minutes-To-Make-FT-RECIPE-0224_Lead-2caa6dc8f3ef4947bda5fa12c27e1a75.jpg",
+            "category": "pasta"
+        },
+        {
+            "_id": "03",
+            "name": "Greek Salad",
+            "img": "https://www.mygreekdish.com/wp-content/uploads/2013/05/Traditional-Greek-Salad-recipe-Horiatiki-Xoriatiki-1-scaled.jpg",
+            "category": "salad"
+        },
+        {
+            "_id": "04",
+            "name": "Homemade Pancakes",
+            "img": "https://www.marthastewart.com/thmb/9SwNGFbxZv2ttLQ3uvZe_McJChk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/easy-basic-pancakes-horiz-1022_0-f13ba897aba6423db7901ca826595244.jpgitokXQMZkp_j",
+            "category": "dessert"
+        },
+        {
+            "_id": "05",
+            "name": "Club Sandwich",
+            "img": "https://realfood.tesco.com/media/images/pesto-club-sandwiches-1400x919-5-38afbee9-71f2-4bb4-aab3-53e2fac4b787-0-1400x919.jpg",
+            "category": "sandwich"
+        },
+        {
+            "_id": "06",
+            "name": "French Fries",
+            "img": "https://www.allrecipes.com/thmb/JZsbJ8XNPxkbDk_hwHz-KI7nSKk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/219634-chef-johns-french-fries-DDMFS-4x3-338dec7976fc4d75bb3e2c18ff6a6e95.jpg",
+            "category": "side"
+        }
+    ],
+    "details": {
+        "01": {
+            "_id": "01",
+            "name": "Recipe 1",
+            "img": "assets/lasagna.jpg",
+            "steps": [
+                "Prepare ingredients",
+                "Mix ingredients",
+                "Cook until done"
+            ],
+            "ingredients": [
+                "1 tbsp Ingredient 1",
+                "2 cups Ingredient 2",
+                "500 g  Ingredient 3",
+                "25 g Ingredient 4"
+            ]
+        },
+        "02": {
+            "_id": "02",
+            "name": "Recipe 2",
+            "img": "assets/roast.jpg",
+            "steps": [
+                "Prepare ingredients",
+                "Mix ingredients",
+                "Cook until done"
+            ],
+            "ingredients": [
+                "500 g  Ingredient 1",
+                "3 tbsp Ingredient 2",
+                "2 cups Ingredient 3"
+            ]
+        },
+        "03": {
+            "_id": "03",
+            "name": "Recipe 3",
+            "img": "assets/fish.jpg",
+            "steps": [
+                "Prepare ingredients",
+                "Mix ingredients",
+                "Cook until done"
+            ],
+            "ingredients": [
+                "4 cups Ingredient 1",
+                "1 tbsp Ingredient 2",
+                "1 tbsp Ingredient 3",
+                "750 g  Ingredient 4",
+                "25 g Ingredient 5"
+            ]
+        }
+    }
+}
