@@ -15,12 +15,11 @@
                 <a href="#" class="details">Details</a>
             </div>
         </div>
+        {{else}}
+        <div class="no-posts">
+            <p class="no-offer">There are no movies yet...</p>
+        </div>
         {{/each}}
-        {{#unless movies}}
-        <p>No movies yet!</p>
-        {{/unless}}
-
-
 
     </div>
 </section>
