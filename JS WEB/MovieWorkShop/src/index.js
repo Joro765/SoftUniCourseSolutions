@@ -16,8 +16,9 @@ app.set("views", path.join(__dirname, "views"));
 
 
 
-// Static css and images
-app.use(express.static("src/public"));
+// Static css and images - Express Middlewares
+app.use(express.static("src/public")); // Middleware за прочитане на всички статични файлове - css/ image etc.
+app.use(express.urlencoded({ extended: false })); // Middleware За прочитане на данни идващи от сървъра. Примерно от форма.
 
 
 
