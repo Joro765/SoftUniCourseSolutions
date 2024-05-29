@@ -5,11 +5,13 @@ const router = express.Router();
 const homeController = require("./controllers/homeController");
 const aboutController = require("./controllers/aboutController");
 const movieController = require("./controllers/movieController");
+const wildCardController = require("./controllers/wildCardController");
 
 // Викаме всички раутове от контролери за да се капсулират в един раутър и него го подаваме в app.js
 router.use(homeController);
 router.use(aboutController);
 router.use(movieController);
+router.use(wildCardController); // Винаги най-отдолу понеже иначе ще override-не съществуващи пътища.
 
 
 module.exports = router;
