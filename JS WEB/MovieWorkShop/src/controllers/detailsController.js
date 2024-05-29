@@ -6,8 +6,10 @@ const movieService = require("../services/movieService");
 
 router.get("/movies/:movieId", (req, res) => {
     const movieId = req.params.movieId;
-    const movie = movieService.getMovie(movieId)
-    res.render("details", movie);
+    const movie = movieService.getMovie(movieId);
+
+    movie.starsRating = new Array(movie.rating).fill(1); // render stars
+    res.render("details", { movie });
 })
 
 
