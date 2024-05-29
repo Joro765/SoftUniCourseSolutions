@@ -1,10 +1,13 @@
 const express = require("express");
 const router = express.Router();
 
+const movieService = require("../services/movieService");
+
 
 
 router.get("/", (req, res) => {
-    res.render("home")
+    const movies = movieService.getAll();
+    res.render("home", { movies })
 });
 
 

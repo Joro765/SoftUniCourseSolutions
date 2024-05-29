@@ -7,6 +7,12 @@ function createMovie(movieData) {
 }
 
 
+function getAll() {
+    return movies.slice();  // Връщаме копие на масива
+}
+
+
 module.exports = {
-    createMovie
+    createMovie,
+    getAll
 }

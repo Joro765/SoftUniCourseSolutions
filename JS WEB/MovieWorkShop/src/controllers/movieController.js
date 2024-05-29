@@ -12,7 +12,7 @@ router.get("/create", (req, res) => {
 router.post("/create", (req, res) => {
     const newMovie = req.body; // Обект с данните от формата
     movieService.createMovie(newMovie);
-    res.send("created movie!");
+    res.redirect("/");
 })
 
 
