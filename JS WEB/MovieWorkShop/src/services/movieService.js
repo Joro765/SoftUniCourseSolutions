@@ -29,8 +29,29 @@ function getMovie(movieId) {
 }
 
 
+// Search
+function search(title, genre, year) {
+    let result = movies.slice();
+
+    if (title) {
+        result = result.filter(movie => movie.title.toLocaleLowerCase().includes(title.toLocaleLowerCase()));
+    }
+
+    if (genre) {
+        result = result.filter(movie => movie.genre.toLocaleLowerCase() === genre.toLocaleLowerCase());
+    }
+
+    if (year) {
+        result = result.filter(movie => movie.date === year);
+    }
+
+    return result;
+
+}
+
 module.exports = {
     createMovie,
     getAll,
-    getMovie
+    getMovie,
+    search
 }
