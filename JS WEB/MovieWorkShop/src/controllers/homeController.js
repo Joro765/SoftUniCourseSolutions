@@ -11,4 +11,11 @@ router.get("/", (req, res) => {
 });
 
 
+router.get("/search", (req, res) => {
+    const movies = movieService.getAll();
+    res.render("search", { movies })
+});
+
+
+
 module.exports = router;
