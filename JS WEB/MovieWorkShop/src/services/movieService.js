@@ -1,3 +1,6 @@
+const Movie = require("../models/Movie");
+
+
 const movies = [
     {
         _id: 1,
@@ -14,18 +17,20 @@ const movies = [
 
 
 function createMovie(movieData) {
-    movieData._id = movies[movies.length - 1]._id + 1; // Взимаме ид-то на последния филм и го инкрементираме с 1 за да създадем ид за нов филм,
-    movies.push(movieData);
+    const movies = Movie.create(movieData);
+    return movies;
 }
 
 
 function getAll() {
-    return movies.slice();  // Връщаме копие на масива
+    const result = Movie.find();
+    return result;
 }
 
 
 function getMovie(movieId) {
-    return movies.find(movie => movie._id == movieId);
+    const movie = Movie.findById(movieId);
+    return movie;
 }
 
 

@@ -5,8 +5,8 @@ const movieService = require("../services/movieService");
 
 
 
-router.get("/", (req, res) => {
-    const movies = movieService.getAll();
+router.get("/", async (req, res) => {
+    const movies = await movieService.getAll().lean(); // lean се изпълнява върху документа за да върне обекти, иначе си връща документ
     res.render("home", { movies })
 });
 

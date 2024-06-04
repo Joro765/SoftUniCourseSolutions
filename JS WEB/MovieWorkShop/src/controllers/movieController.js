@@ -9,10 +9,16 @@ router.get("/create", (req, res) => {
 })
 
 
-router.post("/create", (req, res) => {
-    const newMovie = req.body; // Обект с данните от формата
-    movieService.createMovie(newMovie);
-    res.redirect("/");
+router.post("/create", async (req, res) => {
+    const newMovie = req.body;
+
+    try {
+        await movieService.createMovie(newMovie);
+        res.redirect("/");
+    } catch (error) {
+        console.log(error.message);
+        res.redirect("/create");
+    }
 })
 
 
