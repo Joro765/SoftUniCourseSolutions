@@ -1,4 +1,6 @@
 const express = require("express");
+const mongoose = require("mongoose");
+
 const handlebars = require("express-handlebars");
 const path = require("path");
 const routes = require("./routes");
@@ -24,6 +26,10 @@ app.use(express.urlencoded({ extended: false })); // Middleware За прочи�
 
 // Call router from routes.js
 app.use(routes);
+
+
+// Connect to DB
+mongoose.connect("mongodb://localhost:27017/movies");
 
 
 

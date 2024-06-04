@@ -14,7 +14,7 @@ const movies = [
 
 
 function createMovie(movieData) {
-    movieData._id = movies[movies.length - 1]._id + 1; // Взимаме ид-то на последния филм и го инкрементираме с 1 за да създадем ид за нов филм
+    movieData._id = movies[movies.length - 1]._id + 1; // Взимаме ид-то на последния филм и го инкрементираме с 1 за да създадем ид за нов филм,
     movies.push(movieData);
 }
 
