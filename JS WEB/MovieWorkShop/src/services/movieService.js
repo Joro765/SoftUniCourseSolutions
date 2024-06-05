@@ -1,20 +1,6 @@
 const Movie = require("../models/Movie");
 
 
-const movies = [
-    {
-        _id: 1,
-        title: "Jungle Cruise",
-        genre: "Adventure",
-        director: "Spilberg",
-        date: "2019",
-        imageUrl: "/img/jungle-cruise.jpeg",
-        rating: 5,
-        description: "Dreaming about saving countless lives and having yet another adventure in the jungle..."
-    }
-];
-
-
 
 function createMovie(movieData) {
     const movies = Movie.create(movieData);
@@ -35,8 +21,8 @@ function getMovie(movieId) {
 
 
 // Search
-function search(title, genre, year) {
-    let result = movies.slice();
+async function search(title, genre, year) {
+    let result = await Movie.find().lean();
 
     if (title) {
         result = result.filter(movie => movie.title.toLocaleLowerCase().includes(title.toLocaleLowerCase()));
@@ -47,7 +33,7 @@ function search(title, genre, year) {
     }
 
     if (year) {
-        result = result.filter(movie => movie.date === year);
+        result = result.filter(movie => movie.year === year);
     }
 
     return result;
