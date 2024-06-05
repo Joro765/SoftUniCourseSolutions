@@ -1,4 +1,3 @@
-const { type } = require("chai/chai.js");
 const mongoose = require("mongoose");
 
 
@@ -35,7 +34,7 @@ const movieSchema = new mongoose.Schema({
     imageUrl: {
         type: String,
         required: true,
-        match: /^https?\/\// // да започва с http или https 
+        match: /^https?:\/\// // да започва с http или https 
 
     }
 })
