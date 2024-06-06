@@ -20,6 +20,17 @@ function getMovie(movieId) {
 }
 
 
+
+// Добаване на актьор към филм
+async function attach(movieId, castId) {
+    const movie = await this.getMovie(movieId); // взимаме филма
+
+    movie.casts.push(castId);  // добавяме към филма, актьор в документа
+
+    return movie.save(); // записваме в базата
+}
+
+
 // Search
 async function search(title, genre, year) {
     let result = await Movie.find().lean();
@@ -44,5 +55,6 @@ module.exports = {
     createMovie,
     getAll,
     getMovie,
-    search
+    search,
+    attach
 }

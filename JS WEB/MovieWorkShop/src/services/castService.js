@@ -6,7 +6,13 @@ function createCast(castData) {
     return cast;
 }
 
+function getCasts() {
+    const casts = Cast.find();
+    return casts;
+}
+
 
 module.exports = {
-    createCast
+    createCast,
+    getCasts
 }

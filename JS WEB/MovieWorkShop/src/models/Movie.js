@@ -36,7 +36,11 @@ const movieSchema = new mongoose.Schema({
         required: true,
         match: /^https?:\/\// // да започва с http или https 
 
-    }
+    },
+    casts: [{   // Добавяме рефенция към друг документ в базата. Актьори за всеки филм
+        type: mongoose.Types.ObjectId,
+        ref: "Cast"
+    }]
 })
 
 
