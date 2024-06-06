@@ -22,4 +22,11 @@ router.post("/create", async (req, res) => {
 })
 
 
+// ATTACH CAST TO MOVIE !!!
+
+router.get("/movies/:movieId/attach", (req, res) => {
+    res.render("cast-attach");
+})
+
+
 module.exports = router;
