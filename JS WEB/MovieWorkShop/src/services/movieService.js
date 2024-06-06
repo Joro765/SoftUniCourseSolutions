@@ -15,7 +15,7 @@ function getAll() {
 
 
 function getMovie(movieId) {
-    const movie = Movie.findById(movieId);
+    const movie = Movie.findById(movieId).populate("casts"); // С populate взимаме релациите към филма ако има такива. Удобно е, когато искаме да върнем актьорите за филм.
     return movie;
 }
 
