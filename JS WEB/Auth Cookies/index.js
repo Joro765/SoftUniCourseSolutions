@@ -1,19 +1,24 @@
 const express = require("express");
+const cookieParser = require("cookie-parser");
+
 
 const app = express();
-app.use(express.urlencoded({ extended: false })); // за да се прочита бодито на рекуеста при пост заявка
+app.use(express.urlencoded({ extended: false })); // Middleware за да се прочита бодито на рекуеста при пост заявка
+app.use(cookieParser()); // Middleware за кукита
 
 
 
 app.get("/", (req, res) => {
-    const userInfo = req.headers["cookie"];
+    const user = req.cookies['user']; // прочитане на куки с име "user"
 
-    if (userInfo) {
-        res.send(`Hello ${userInfo.split("=")[1]}`);
-    } else {
-        res.send("Please login");
+    if (user) {
+        res.send(`<h1>Hello ${user}</h1>`)
     }
+
+    res.send("Please login");
 })
+
+
 
 app.get("/login", (req, res) => {
     res.send(`
@@ -28,10 +33,16 @@ app.get("/login", (req, res) => {
 })
 
 
-app.post("/login", (req, res) => {
-    console.log(req.body);
 
-    res.header("Set-Cookie", `userInfo=${req.body.username}`); // add cookie
+app.post("/login", (req, res) => {
+    res.cookie("user", req.body.username);  // създаване на куки с име user
+    res.redirect("/");
+    res.end();
+
+})
+
+app.get("/logout", (req, res) => {
+    res.clearCookie("user"); // маха куки
     res.redirect("/");
     res.end();
 })
