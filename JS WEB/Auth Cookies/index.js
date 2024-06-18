@@ -1,5 +1,6 @@
 const express = require("express");
 const cookieParser = require("cookie-parser");
+const bcrypt = require("bcrypt");
 
 
 const app = express();
@@ -34,7 +35,11 @@ app.get("/login", (req, res) => {
 
 
 
-app.post("/login", (req, res) => {
+app.post("/login", async (req, res) => {
+    const salt = await bcrypt.genSalt(10); // генерираме сол, която да добавим към хеширането на паролата
+    const hashedPassword = await bcrypt.hash(req.body.password, salt);
+
+    console.log(`Hashed password: ${hashedPassword}`);
     res.cookie("user", req.body.username);  // създаване на куки с име user
     res.redirect("/");
     res.end();
@@ -43,7 +48,6 @@ app.post("/login", (req, res) => {
 
 app.get("/logout", (req, res) => {
     res.clearCookie("user"); // маха куки
-    res.redirect("/");
     res.end();
 })
 
