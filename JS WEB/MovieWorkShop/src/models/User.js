@@ -5,7 +5,8 @@ const bcrypt = require("bcrypt");
 const userSchema = new mongoose.Schema({
     email: {
         type: String,
-        required: true
+        required: true,
+        unique: true    // index за по-бързо търсене и не позволява 2 еднакви мейла в базата !!!
     },
     password: {
         type: String,
