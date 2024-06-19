@@ -12,7 +12,8 @@ router.get("/login", (req, res) => {
 router.post("/login", async (req, res) => {
     const loginData = req.body;
     const token = await userService.login(loginData); // връшаме jwt token
-    console.log(token);
+
+    res.cookie("auth", token); // изпраща куки с jwt токен-а.
     res.redirect("/");
 })
 
