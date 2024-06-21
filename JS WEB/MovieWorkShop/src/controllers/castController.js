@@ -2,14 +2,15 @@ const express = require("express");
 const router = express.Router();
 
 const castService = require("../services/castService");
+const { isAuth } = require("../middlewares/authMiddleware");
 
 
-router.get("/cast/create", (req, res) => {
+router.get("/cast/create", isAuth, (req, res) => {
     res.render("cast-create");
 });
 
 
-router.post("/cast/create", async (req, res) => {
+router.post("/cast/create", isAuth, async (req, res) => {
     const data = req.body;
 
     try {

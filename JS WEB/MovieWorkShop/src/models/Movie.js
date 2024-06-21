@@ -4,21 +4,24 @@ const mongoose = require("mongoose");
 const movieSchema = new mongoose.Schema({
     title: {
         type: String,
-        required: true
+        required: true,
+        minLength: 5
     },
     genre: {
         type: String,
-        required: true
+        required: true,
+        minLength: 5
     },
     director: {
         type: String,
-        required: true
+        required: true,
+        minLength: 5
     },
     year: {
         type: Number,
         required: true,
         min: 1900,
-        max: 2030
+        max: 2024
     },
     rating: {
         type: Number,
@@ -29,7 +32,7 @@ const movieSchema = new mongoose.Schema({
     description: {
         type: String,
         required: true,
-        maxLength: 250
+        minLength: 20
     },
     imageUrl: {
         type: String,
@@ -40,7 +43,11 @@ const movieSchema = new mongoose.Schema({
     casts: [{   // Добавяме рефенция към друг документ в базата. Актьори за всеки филм
         type: mongoose.Types.ObjectId,
         ref: "Cast"
-    }]
+    }],
+    owner: {
+        type: mongoose.Types.ObjectId,
+        ref: "User"
+    }
 })
 
 

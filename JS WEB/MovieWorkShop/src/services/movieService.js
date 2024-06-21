@@ -1,3 +1,4 @@
+const { Mongoose } = require("mongoose");
 const Movie = require("../models/Movie");
 
 
@@ -18,6 +19,18 @@ function getMovie(movieId) {
     const movie = Movie.findById(movieId).populate("casts"); // С populate взимаме релациите към филма ако има такива. Удобно е, когато искаме да върнем актьорите за филм.
     return movie;
 }
+
+
+async function deleteMovie(movieId) {
+    await Movie.findByIdAndDelete(movieId);
+}
+
+
+async function edit(movieId, editedMovie) {
+    await Movie.findByIdAndUpdate(movieId, editedMovie)  // едит
+}
+
+
 
 
 
@@ -56,5 +69,7 @@ module.exports = {
     getAll,
     getMovie,
     search,
-    attach
+    attach,
+    deleteMovie,
+    edit
 }

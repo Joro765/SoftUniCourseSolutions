@@ -3,15 +3,24 @@ const cookieparser = require("cookie-parser");
 const bcrypt = require("bcrypt");
 
 const jwt = require("../util/jwt.js");
-
-
-const secret = "34125rfedqwe32qrdwaf32123ed3214132qwdfa";
+const { SECRET } = require("../config/config");
 
 
 
 // добавяне на потребител в базата // паролата се хешира в модела !
-function register(userData) {
-    User.create(userData);
+async function register(userData) {
+
+    if (userData.password !== userData.rePassword) { // ако паролите не съвпадат !!!
+        throw new Error("Password missmatch");
+    }
+
+    const user = await User.findOne({ email: userData.email });
+
+    if (user) {
+        throw new Error("Email already exists!");     // Проверяваме дали има такъв мейл преди да го регистрираме !!!
+    }
+
+    return User.create(userData);
 }
 
 
@@ -40,7 +49,7 @@ async function login(userData) {
         email: user.email
     }
 
-    const token = await jwt.sign(payload, secret, { expiresIn: "2h" });
+    const token = await jwt.sign(payload, SECRET, { expiresIn: "2h" });
     return token;
 
 }

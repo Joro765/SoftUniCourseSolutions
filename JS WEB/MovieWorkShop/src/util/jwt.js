@@ -1,23 +1,16 @@
 const jwt = require("jsonwebtoken");
+const util = require("util");
 
 
 // Превръщаме билд ин функцията sign на jwt в такава, която работи с промиси
-function sign(payload, secret, options = {}) {
-    const promise = new Promise((resolve, reject) => {
-        jwt.sign(payload, secret, options, (err, token) => {
-            if (err) {
-                return reject(err)
-            }
+const sign = util.promisify(jwt.sign);
 
-            resolve(token);
-        })
 
-    });
-
-    return promise;
-}
+// Проверява съществуващ токен дали е активен 
+const verify = util.promisify(jwt.verify);
 
 
 module.exports = {
-    sign
+    sign,
+    verify
 }

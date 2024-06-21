@@ -4,21 +4,24 @@ const mongoose = require("mongoose");
 const castSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: true
+        required: true,
+        minLength: 5
     },
     age: {
         type: Number,
         required: true,
         max: 120,
-        min: 14
+        min: 1
     },
     born: {
         type: String,
-        required: true
+        required: true,
+        minLength: 10
     },
     nameInMovie: {
         type: String,
         required: true,
+        minLength: 5
     },
     castImage: {
         type: String,

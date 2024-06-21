@@ -6,11 +6,15 @@ const userSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true,
-        unique: true    // index за по-бързо търсене и не позволява 2 еднакви мейла в базата !!!
+        unique: true,    // index за по-бързо търсене и не позволява 2 еднакви мейла в базата !!!
+        match: [/[a-zA-Z0-9]+\@[a-zA-Z0-9]+\.[a-zA-Z0-9]+/, "Invalid email!"], // проверка за валиден имейл !!!
+        minLength: [10, "Email should be at least 10 characters long!"]
     },
     password: {
         type: String,
-        required: true
+        required: true,
+        match: [/[a-zA-Z0-9]+/, "Password cannot include symbols"],
+        minLength: [6, "Password should be at least 6 characters long!"]
     }
 })
 

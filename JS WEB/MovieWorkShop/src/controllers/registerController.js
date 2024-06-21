@@ -11,18 +11,13 @@ router.get("/register", (req, res) => {
 router.post("/register", async (req, res) => {
     const userData = req.body;
 
-    if (userData.password !== userData.rePassword) { // ако паролите не съвпадат !!!
-        throw new Error("Password missmatch");
-    }
-
     try {
         await userService.register(userData); // заявка за добавяне на потребител в базата
         res.redirect("/login");
-    } catch (error) {
-        console.log(error.message);
+    } catch (err) {         // подаваме и данните за да не се изгубят от полетата
+        res.render("register", { userData, error: err.message }); // ако избие грешка рендерира страницата и подава грешката на view-то
     }
 
-    res.end();
 })
 
 

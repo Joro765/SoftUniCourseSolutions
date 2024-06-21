@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
+const { auth } = require("./middlewares/authMiddleware");
 
 const handlebars = require("express-handlebars");
 const path = require("path");
@@ -23,6 +24,7 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.static("src/public")); // Middleware за прочитане на всички статични файлове - css/ image etc.
 app.use(express.urlencoded({ extended: false })); // Middleware За прочитане на данни идващи от сървъра. Примерно от форма.
 app.use(cookieParser()); // Middleware, който да праща куки на всеки рекуест
+app.use(auth);  // проверява на всяка заявка дали има юзър - req.user - 
 
 
 // Call router from routes.js

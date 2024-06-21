@@ -33,7 +33,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
-    
+
 }
 
 nav,
@@ -153,6 +153,13 @@ footer {
     animation: cssAnimation 0s ease-in 2s forwards;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+}
+
+
+.error {
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 16px;
 }
 
 @keyframes cssAnimation {
