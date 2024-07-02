@@ -1,3 +1,5 @@
+import TeamMember from "./TeamMember"
+
 export default function Team() {
     return (
         <section className="team section-padding" data-scroll-index='3'>
@@ -11,13 +13,9 @@ export default function Team() {
                         </div>
                         <div className="section-content text-center">
                             <div className="row">
-                                <div className="col-md-4">
-                                    <div className="team-detail wow bounce" data-wow-delay="0.2s"> <img src="images/user1.jpg" className="img-fluid" />
-                                        <h4>Nitu Singh</h4>
-                                        <p>Marketing Specialist</p>
-                                    </div>
-                                </div>
-                                <div className="col-md-4">
+                                <TeamMember></TeamMember>
+
+                                {/* <div className="col-md-4">
                                     <div className="team-detail wow bounce" data-wow-delay="0.4s"> <img src="images/user2.jpg" className="img-fluid" />
                                         <h4>Yogesh Singh</h4>
                                         <p>CEO & Founder</p>
@@ -28,7 +26,7 @@ export default function Team() {
                                         <h4>Nisha Sharma</h4>
                                         <p>Web Developer</p>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>
