@@ -1,0 +1,46 @@
+#root {
+    width: 100vw;
+}
+
+h2 {
+    text-align: center;
+}
+
+
+li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 50%;
+    background-color: #eee;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.MovieTitle {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #555;
+    transition: all 0.2s;
+}
