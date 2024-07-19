@@ -47,28 +47,30 @@ export default function ControlledForm() {
 
     return (
         <>
-            <h2>Controlled Form</h2>
-            <form onSubmit={formSubmitHandler}>
-                <div className="form-section">
-                    <label htmlFor="username">Username</label>
-                    <input type="text" name="username" id="username" value={formValues.username} onChange={changeHandler} ref={inputRef} />
-                </div>
-                <div className="form-section">
-                    <label htmlFor="password">Password</label>
-                    <input type="password" name="password" id="password" value={formValues.password} onChange={changeHandler} />
-                </div>
-                <div className="form-section">
-                    <label htmlFor="occupation">Occupation</label>
-                    <select name="occupation" id="occupation" value={formValues.occupation} onChange={changeHandler}>
-                        <option value="IT">IT</option>
-                        <option value="BA">BA</option>
-                        <option value="AI">AI</option>
-                    </select>
-                </div>
-                <div className="form-section">
-                    <button disabled type="submit" ref={buttonRef}>Submit</button>
-                </div>
-            </form>
+            <div className="container">
+                <h2>Controlled Form</h2>
+                <form onSubmit={formSubmitHandler}>
+                    <div className="form-section">
+                        <label htmlFor="username">Username</label>
+                        <input type="text" name="username" id="username" value={formValues.username} onChange={changeHandler} ref={inputRef} />
+                    </div>
+                    <div className="form-section">
+                        <label htmlFor="password">Password</label>
+                        <input type="password" name="password" id="password" value={formValues.password} onChange={changeHandler} />
+                    </div>
+                    <div className="form-section">
+                        <label htmlFor="occupation">Occupation</label>
+                        <select name="occupation" id="occupation" value={formValues.occupation} onChange={changeHandler}>
+                            <option value="IT">IT</option>
+                            <option value="BA">BA</option>
+                            <option value="AI">AI</option>
+                        </select>
+                    </div>
+                    <div className="form-section">
+                        <button disabled type="submit" ref={buttonRef}>Submit</button>
+                    </div>
+                </form>
+            </div>
         </>
     )
 }

@@ -25,6 +25,7 @@ body {
 
 .site-header {
   background-color: darkorange;
+  color: #242424;
 
 }
 
@@ -44,6 +45,11 @@ body {
 .site-header nav ul li {
   font-size: 1.4em;
   padding: 0.2em 0.4em;
+}
+
+.site-header a {
+  text-decoration: none;
+  color: inherit;
 }
 
 
@@ -113,4 +119,115 @@ form button {
 .welcome-msg {
   font-style: italic;
   padding-bottom: 0.5em;
+}
+
+
+
+/* ABOUT SECTION */
+.about-section h2 {
+  text-align: center;
+}
+
+.second-header {
+  border-bottom: 1px solid darkorange;
+  margin-bottom: 2.5em;
+}
+
+.second-header ul {
+  display: flex;
+  gap: 2em;
+  list-style: none;
+  justify-content: flex-start;
+}
+
+.second-header ul a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.5em;
+}
+
+
+
+
+/* WILDCARD */
+
+.container.wildcard {
+  max-width: 50%;
+  margin: 0 auto;
+  min-height: 150px;
+}
+
+.container.wildcard a {
+  color: darkorange;
+}
+
+
+
+/* DEVELOPERS SECTION */
+.developers-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+
+/* DEVELOPER CARD */
+
+.developer-container {
+  width: 500px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid darkorange;
+}
+
+.developer-container button {
+  margin-top: 1em;
+  padding: 0.2em 0.3em;
+}
+
+
+
+/* DEVELOPER DETAILS */
+
+.developer-details-container {
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid darkorange;
+  text-align: center;
+}
+
+
+.developer-information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 2em;
+}
+
+
+.developer-information ul {
+  list-style: none;
+  display: flex;
+  gap: 0.3em;
+  font-weight: bold;
+}
+
+
+.developer-details-buttons {
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.developer-details-buttons button {
+  padding: 0.2em 0.5em;
 }
